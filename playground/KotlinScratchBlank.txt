@@ -1,0 +1,410 @@
+import com.handstandsam.playground.JavaUser
+
+/**
+ * INTEROP WITH JAVA
+ */
+// Create a Java User
+val samEdwards = JavaUser("Sam", "Edwards")
+//println(samEdwards.getFirstName())
+//println(samEdwards.firstName) //property syntax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * KOTLIN FUNCTIONS are FUN
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * KOTLIN FUNCTIONS
+ *
+ * "Unit" is like "void", but not required
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * KOTLIN EXTENSION FUNCTION
+ *
+ * TYPE.CUSTOM_METHOD
+ *
+ * SHOW JAVA BYTECODE -> JAVA CODE
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * EXTENSION FUNCTION
+ *
+ * Add functionality that didn't exist.
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * NULL POINTER EXCEPTIONS IN JAVA CODE
+ *
+ * @NotNull and @Nullable Annotations
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * AUTO-MAGIC JAVA -> KOTLIN CONVERSION
+ *
+ * Code -> Convert Java File to Kotlin File
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * KOTLIN DATA CLASSES
+ *
+ * SHOW JAVA BYTECODE -> JAVA CODE
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * NAMED PARAMETERS & COPY
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * NAMED PARAMETERS SAVE THE DAY
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * HIGHER ORDER FUNCTIONS
+ *
+ * (INPUT) -> OUTPUT
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * ENUM CLASSES STILL EXIST
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * SEALED CLASSES
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * COROUTINES & REACTIVE PROGRAMMING
+ */
+// AMAZING!  But not in this live coding demo...
+
+
