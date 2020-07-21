@@ -26,6 +26,83 @@ val samEdwards = JavaUser("Sam", "Edwards")
 
 
 
+
+/**
+ * NULLABILITY IN THE TYPE SYSTEM
+ */
+val nonNullString: String = "I am a String"
+val nullableString: String? = null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * NULL POINTER EXCEPTIONS IN JAVA CODE
+ */
+nonNullString.length
+//nullableString.length
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @NotNull and @Nullable Annotations
+ */
+var nullUser = JavaUser(null, null)
+nullUser.firstName // NULL
+//nullUser.firstName.length // NPE
+
+
+
+
+
+
+
+
+
+
+
 /**
  * KOTLIN FUNCTIONS are FUN
  */
@@ -118,46 +195,6 @@ fun JavaUser.lastThenFirst() {
     println("$lastName, $firstName")
 }
 samEdwards.lastThenFirst()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * NULL POINTER EXCEPTIONS IN JAVA CODE
- *
- * @NotNull and @Nullable Annotations
- */
-var nullUser = JavaUser(null, null)
-nullUser.firstName // NULL
-//nullUser.firstName.length // NPE
-
-
-
-
 
 
 
