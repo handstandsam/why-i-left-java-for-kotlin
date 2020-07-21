@@ -1,0 +1,364 @@
+import com.handstandsam.playground.JavaUser
+
+/**
+ * VAL vs VAR
+ *
+ * INTEROP WITH JAVA
+ */
+// Create a Java User
+val samEdwards = JavaUser("Sam", "Edwards")
+//println(samEdwards.getFirstName())
+//println(samEdwards.firstName) //property syntax
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * KOTLIN FUNCTIONS are FUN
+ */
+fun firstLast(user: JavaUser): String {
+    return "${user.firstName} ${user.lastName}"
+}
+println(firstLast(samEdwards))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * KOTLIN FUNCTIONS
+ *
+ * "Unit" is like "void", but not required
+ */
+fun justPrint(user: JavaUser): Unit {
+    println("${user.firstName} ${user.lastName}")
+}
+justPrint(samEdwards)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * KOTLIN EXTENSION FUNCTION
+ *
+ * TYPE.CUSTOM_METHOD
+ *
+ * SHOW JAVA BYTECODE -> JAVA CODE
+ */
+fun JavaUser.firstLast() {
+    println("$firstName $lastName")
+}
+samEdwards.firstLast()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * EXTENSION FUNCTION
+ *
+ * Add functionality that didn't exist.
+ */
+fun JavaUser.lastThenFirst() {
+    println("$lastName, $firstName")
+}
+samEdwards.lastThenFirst()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * NULL POINTER EXCEPTIONS IN JAVA CODE
+ *
+ * @NotNull and @Nullable Annotations
+ */
+var nullUser = JavaUser(null, null)
+nullUser.firstName // NULL
+//nullUser.firstName.length // NPE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * AUTO-MAGIC JAVA -> KOTLIN CONVERSION
+ *
+ * Code -> Convert Java File to Kotlin File
+ */
+var kotlinNullUser = JavaUser(null, null)
+println(kotlinNullUser.firstName)
+//println(kotlinNullUser.firstName.length) // NPE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * KOTLIN DATA CLASSES
+ *
+ * SHOW JAVA BYTECODE -> JAVA CODE
+ */
+data class KotlinUser(
+    val firstName: String,
+    val lastName: String
+)
+
+//val kotlinUser = KotlinUser(null, null)
+//val kotlinUser = KotlinUser("Kotlin", "User")
+//println(kotlinUser.firstName)
+//kotlinUser.firstName = "First"
+//val newKotlinUser = kotlinUser.copy(firstName = "First")
+//println(newKotlinUser)
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * NAMED PARAMETERS & COPY
+ */
+val namedParamsUser = KotlinUser(
+    lastName = "Edwards",
+    firstName = "Sam"
+)
+println(namedParamsUser)
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * NAMED PARAMETERS SAVE THE DAY
+ */
+data class UserEligibility(
+    val isActive: Boolean,
+    val canWithdraw: Boolean,
+    val canDeposit: Boolean
+)
+
+//val userEligibility = UserEligibility(true, true, true)
+
+
+
+
+
+
+
+
+
+
+/**
+ * HIGHER ORDER FUNCTIONS
+ *
+ * (INPUT) -> OUTPUT
+ */
+val isActiveRule: (UserEligibility) -> Boolean = {
+    it.isActive
+}
+
+val isNotActiveRule: (UserEligibility) -> Boolean = { eligibility ->
+    !eligibility.isActive
+}
+
+//isActiveRule(userEligibility)
+//isNotActiveRule(userEligibility)
+
+
+
+
+//fun UserEligibility.compute(rule: (UserEligibility) -> Boolean): Boolean {
+//    return rule(this)
+//}
+//userEligibility.compute(isActiveRule)
+//userEligibility.compute(isNotActiveRule)
+
+
+
+
+
+
+
+
+/**
+ * ENUM CLASSES STILL EXIST
+ */
+enum class EligibilityEnum { ELIGIBLE, INELIGIBLE }
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * SEALED CLASSES
+ */
+sealed class EligibilityResult {
+    object Eligible : EligibilityResult()
+    data class InEligible(val reason: String) : EligibilityResult()
+}
+
+
+
+
+
+
+
+
+
+
+val newActiveRule: (UserEligibility) -> EligibilityResult = { eligibility ->
+    if (eligibility.isActive) {
+        EligibilityResult.Eligible
+    } else {
+        EligibilityResult.InEligible("You weren't active.")
+    }
+}
+
+
+
+
+
+
+
+
+/**
+ * COROUTINES & REACTIVE PROGRAMMING
+ */
+// AMAZING!  But not in this live coding demo...
+
+
